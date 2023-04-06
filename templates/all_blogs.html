@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Alex  has written {{ blog_total}} post{{ blog_total|pluralize }} </h1>
+
+{% for blog in blogs %}
+<a href="{% url 'detail' blog.id %}">{{blog.title}}</a>
+
+<h5>{{blog.date}}</h5>
+<p>{{blog.description}}</p>
+
+{% endfor %}
+
+
+
+
+</body>
+</html>
